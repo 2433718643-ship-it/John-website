@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+
+			body,
+			html {
+				padding: 0;
+				margin: 0;
+				font-family: Arial, sans-serif;
+				display: block;
+			}
+
+			.startwaves {
+				position: fixed;
+				display: flex;
+				justify-content: center;
+				height: 120vh;
+				width: 100%;
+				background-color: #469ce5;
+				transform: translateY(-10vh);
+				animation-name: down;
+				animation-duration: 3s;
+				animation-delay: 1s;
+				animation-timing-function: ease-out;
+				z-index: 999;
+			}
+
+			@keyframes down {
+				0% {
+					transform: translateY(-10vh);
+				}
+
+				100% {
+					transform: translateY(110vh);
+				}
+
+			}
+
+			.waves {
+				display: block;
+				position: absolute;
+				bottom: 120vh;
+				width: 100%;
+			}
+
+			#videobg {
+				width: 100%;
+				height: 100%;
+			}
+
+			.videos {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				position: absolute;
+			}
+
+			#centertext {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+				animation-name: out;
+				animation-duration: 1.5s;
+				animation-delay: 3s;
+				animation-fill-mode: forwards; 
+			}
+
+			@keyframes out {
+				100% {
+					opacity: 0;
+					display: none;
+				}
+			}
+			@keyframes in {
+				100% {
+					opacity: 1;
+				}
+			}
+			#p3relogo{
+				position: absolute;
+				right: 12%;
+				top: 50%;
+				opacity: 0;
+				transform: translateY(-50%);
+				animation-name: in;
+				animation-duration: 1.5s;
+				animation-delay: 5s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards; 
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="startwaves" id="downout">
+			<div class="waves">
+				<img src="img/waves/wave-1.svg" />
+				<img src="img/waves/wave-2.svg" />
+				<img src="img/waves/wave-3.svg" />
+				<img src="img/waves/wave-4.svg" />
+				<img src="img/waves/wave-5.svg" id="shape" />
+			</div>
+		</div>
+		<div id="videobg">
+			<video id="video2" class="videos" muted="muted" loop>
+				<source src="assset/fv_movie2.mp4">
+			</video>
+			<video id="video1" class="videos" muted="muted">
+				<source src="assset/fv_movie1.mp4">
+			</video>
+			<div id="centertext">
+				<h1>Memento Mori</h1>
+				<p>Remember, You Will Die.<br />Time never waits.<br />It delivers all equally to the same end.</p>
+			</div>
+			<img id="p3relogo" src="img/P3RE.svg" alt="" />
+		</div>
+		<script>
+			var downwave = document.getElementById('downout');
+			
+			// 添加动画结束事件监听器
+			downwave.addEventListener('animationend', function() {
+				// 在动画结束后执行你的操作，比如改变元素属性
+				downwave.style.display = 'none'
+				var video1 = document.getElementById("video1");
+				var video2 = document.getElementById("video2");
+				video1.play();
+				video1.addEventListener('ended', function() {
+					// 在视频播放结束时执行你的操作
+					// alert('视频播放结束！');
+					video1.style.display = 'none'
+					video2.play();
+video2.style.display = 'none'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				});
+			});
+
+		</script>
+		<body background="https://image.16pic.com/00/38/62/16pic_3862207_s.jpg">>
+			
+		</body>
+		
+			<div style = " text-align:center;">
+				<div style="color: white;">
+		<h1 style="font-size:50px;"> My first Website</h1>
+		
+		<h1 style = " text-align:center;"> My Name is John</h1>
+        
+		<p> I am a student from Shanghai China <p>
+	    
+		<p style = " text-align:center;">
+		<img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\sh.jpg" width ="400"/>
+        <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbF7AYMg6EkWtJ6zks9a1RBJt3seHUG4We5GhdOrgtog&s=10" width ="400"/>	
+	    </p>
+
+		<p>Introduce</p>
+
+		<h1> My Hobbies </h1>
+		<p>I like photographing</p>	
+		<p></p>
+		<img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\ph.jpg" width ="400"/>
+        
+		<p>I like playing games</p>
+
+		<img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\resident-evil-4-remake.jpg" width ="400"/>
+
+		
+		<img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa4HM0XBfWt3AhxtMbMy00-gXT903t_yAKGeg_yQNWcA&s=10" width ="400"/>
+		<h1>This is my Python Quiz</h1>
+		<pre>
+			<code style="font-size:20px;">
+score = 0
+print("Question 1 :\n")
+print("What is the capital of China ?")
+a1=input()
+if (a1=="Beijing"):
+    score+=1
+    print("Great Job. Your score is : ",score)
+else :
+    print("Sorry The correct answer is Beijing .")
+print("Question 2 :\n")    
+print("What is the capital of Canada ?")    
+a2=input()
+if (a2=="Vancouver"):
+    score+=1
+    print("Great Job. Your score is : ",score)
+else :
+    print("Sorry The correct answer is Vancouver .")
+print("Question 3 :\n")    
+print("What color is a polar bear’s skin ?")    
+a3=input()
+if (a3=="black"):
+    score+=1
+    print("Great Job. Your score is : ",score)
+else :
+    print("Sorry The correct answer is black .")
+print("Question 4 :\n")    
+print("Can lightning strike the same spot twice,Yes or No?")    
+a4=input()
+if (a4=="Yes"):
+    score+=1
+    print("Great Job. Your score is : ",score)
+else :
+    print("Sorry The correct answer is Yes .")
+print("Question 5 :\n")      
+print("How many years can a snail sleep?")    
+a5=input()
+if (a5=="3"):
+    score+=1
+    print("Great Job. Your score is : ",score)
+else :
+    print("Sorry The correct answer is three years.")
+print("Question 6 :\n")      
+print("Does the Moon produce its own light, Yes or No?")    
+a6=input()
+if (a6=="No"):
+    score+=1
+    print("Great Job. Your score is : ",score)
+else :
+    print("Sorry The correct answer is No .")
+print("Question 7 :\n")      
+print("Is watermelon a fruit or a vegetable?")
+a7=input()
+if (a7=="fruit"):
+    score+=1
+    print("Great Job. Your score is : ",score)
+else :
+    print("Sorry The correct answer is fruit .")
+print("Question 8 :\n")      
+print("Do penguins live in the Arctic,Yes or No?")    
+a8=input()
+if (a8=="No"):
+    score+=1
+    print("Great Job. Your score is : ",score)
+else :
+    print("Sorry The correct answer is No .")
+print("Question 9 :\n")      
+print("Will honey go bad,Yes or No?")    
+a9=input()
+if (a9=="No"):
+    score+=1
+    print("Great Job. Your score is : ",score)
+else :
+    print("Sorry The correct answer is No .")
+print("Question 10 :\n")      
+print("Does water boil at a higher temperature on high mountains,Yes or No?")    
+a10=input()
+if (a10=="No"):
+    score+=1
+    print("Great Job. Your score is : ",score)
+else :
+    print("Sorry The correct answer is No .")
+if (score >= 6) :
+    print("Good job ,your score is :",score,"Pass!")
+else :
+    print("Sorry ,your score is :",score,"Fail!")
+
+			</code>
+		</pre>
+
+
+		<h1> My Canada Goals</h1>
+		<p> Taking photographs</p>
+		<p> Feeling foregin culture</p>
+		<h1> August 6th:Arrive in Canada	 </h1>
+        <p> Today I arrived in Canada. It's so hard to take a 15-hour flight.</p>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\fly\1.jpg"width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\fly\2.jpg"width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\fly\3.jpg"width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\fly\4.jpg"width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\fly\5.jpg"width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\fly\6.jpg"width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\fly\7.jpg"width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\fly\8.jpg"width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\fly\9.jpg"width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\fly\10.jpg"width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\fly\11.jpg"width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\fly\12.jpg"width ="400"/>
+
+		<h1> August 7th: Go shopping 	 </h1>
+        <p> Today I went shopping. It's so surprised that I can see these drinks here.</p>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\shop\1.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\shop\2.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\shop\3.jpg" width ="400"/>
+
+		<h1> August 8th: CN	Tower & Ripley's Aquarium of Canada	 </h1>
+        <p> Today I went to CN	Tower & Ripley's Aquarium of Canada. The tower is so high that I can almost see the whole city.There are various fishes in the aquarium.</p>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\9.jpg" width ="400"/>
+       
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\3.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\4.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\5.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\1.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\7.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\8.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\20.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\10.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\11.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\12.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\13.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\14.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\15.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\16.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\17.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\18.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\19.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\21.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\2.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cn t\22.jpg" width ="400"/>
+
+        <h1> August 9th:Physics & Games </h1>
+        <p> Today I finished physics project and played games. The project and games are quite interesting. </p>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\pg\1.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\pg\2.jpg" width ="400"/>
+        <h1> August 10th:Centennial College </h1>
+        <p> Today I went to Centennial College. I have never seen so many airplanes at aschool before. </p>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\bnlg\1.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\bnlg\2.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\bnlg\3.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\bnlg\4.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\bnlg\5.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\bnlg\6.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\bnlg\7.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\bnlg\8.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\bnlg\9.jpg" width ="400"/>
+         <h1> August 11th:UOFT</h1>
+        <p> Today I went to Unversity Of Toronto. The school is multiplex.</p>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\1.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\2.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\3.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\4.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\5.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\6.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\7.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\8.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\9.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\10.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\11.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\12.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\13.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\14.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\15.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\16.jpg"width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\17.jpg"width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\uoft\18.jpg"width ="400"/>
+          <h1> August 12th:McMaster Unversity & Niagara Fall</h1>
+        <p> Today I went to McMaster Unversity and Niagara Fall.The fall is so grand.</p>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\1.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\2.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\3.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\4.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\5.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\6.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\7.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\8.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\9.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\10.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\11.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\12.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\13.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\14.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\15.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\16.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\17.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\18.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\19.jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\mcm nf\20.jpg" width ="400"/>
+
+
+        <h1> August 13th:Casaloma </h1>
+        <p> Today I went to Casaloma.That is so luxurious and classic. It is so surprised that there are lots of guns.</p>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\casa\1.jpg" width ="400"/>
+         <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\casa\2.jpg" width ="400"/>
+        
+         <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\casa\3.jpg" width ="400"/>
+        
+         <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\casa\4.jpg" width ="400"/>
+        
+         <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\casa\5.jpg" width ="400"/>
+         <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\casa\6.jpg" width ="400"/>
+         <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\casa\7.jpg" width ="400"/>
+         <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\casa\8.jpg" width ="400"/>
+         <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\casa\9.jpg" width ="400"/>
+         <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\casa\10.jpg" width ="400"/>
+        
+         <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\casa\12.jpg" width ="400"/>
+         <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\casa\13.jpg" width ="400"/>
+          <h1> August 14th:UTM & Walterloo University</h1>
+        <p> Today I went to UTM & Walterloo University.The two university are very unique.</p>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (1).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (2).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (3).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (4).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (5).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (6).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (7).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (8).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (9).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (10).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (11).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (12).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (13).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (14).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (15).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (16).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (17).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (18).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (19).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (20).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (21).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (22).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (23).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (24).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (25).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\un\un (26).jpg" width ="400"/>
+        <h1> August 15th：Royal Ontario Museum & Lego Programe</h1>
+        <p> Today I went to ROM.The musum contains various culture.</p>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (2).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (1).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (3).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (4).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (5).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (6).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (7).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (8).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (9).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (10).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (11).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (12).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (13).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (14).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (15).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (16).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (17).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (18).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (19).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (20).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (21).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (22).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (23).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (24).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (25).jpg" width ="400"/>
+
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (26).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (27).jpg" width ="400"/>
+
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (28).jpg" width ="400"/>
+
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (29).jpg" width ="400"/>
+
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (30).jpg" width ="400"/>
+
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (31).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (32).jpg" width ="400"/>
+
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (33).jpg" width ="400"/>
+
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (34).jpg" width ="400"/>
+
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (35).jpg" width ="400"/>
+
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (36).jpg" width ="400"/>
+
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (37).jpg" width ="400"/>
+
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (38).jpg" width ="400"/>
+
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (39).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (40).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (41).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (42).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (43).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (44).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (45).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (46).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (47).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (48).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (49).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\rom (50).jpg" width ="400"/>
+       <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\rom\11.jpg" width ="400"/>
+        <h1> August 16th:CCC J1 Code & City Cruise </h1>
+        <p> Today I tried to finish CCC J1 Code.The scenery is so nice.</p>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cc\cc (1).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cc\cc (2).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cc\cc (3).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cc\cc (4).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cc\cc (5).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cc\cc (6).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cc\cc (7).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cc\cc (8).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cc\cc (9).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cc\cc (10).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cc\cc (11).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cc\cc (12).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cc\cc (13).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cc\cc (14).jpg" width ="400"/>
+        <img src ="D:\HuaweiMoveData\Users\g'z'z\Desktop\html\cc\cc (15).jpg" width ="400"/>
+
+
+
+
+        
+
+
+		
+	</head>
+	</body>
+</html>
+
+	</body>
+</html>
